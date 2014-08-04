@@ -1,5 +1,8 @@
-import Problems.P001
+
 import Utils.Numeric
 
+import Problems.P001
+import Problems.P002
+
 main :: IO ()
-main = putStrLn $  show  p001
+main = putStrLn $  show  p002
