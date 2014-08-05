@@ -21,14 +21,20 @@ factorise x | x <= 1 = [x]
 prop_factprod :: Integer -> Bool
 prop_factprod x = x == product ( factorise x )
 
-isPalindrome :: Integer -> Bool
-isPalindrome x = show x == reverse (show x)
+isPalindrome :: String -> Bool
+isPalindrome x = x == reverse x
 
 isPrime :: Integer -> Bool
 isPrime 1 = False
 isPrime 2 = True
 isPrime x = null $ filter (\y -> x `mod` y == 0 ) [2..z]
   where z = floor (sqrt (fromIntegral x))
+
+
+erosthenes :: [Integer]
+erosthenes = ert [2..]
+    where ert (x:xs) = x : ert ( filter (\y -> y `mod` x /= 0 ) xs )
+              
 
 
 factors :: Integer -> [Integer]
@@ -49,3 +55,11 @@ numFactors  x =  product $ map (\y -> y+1) $ map length $ groupBy (==) (primeFac
 
 
 
+my_gcd :: Integral a => a -> a -> a
+my_gcd x y | x < y = my_gcd y x
+        | otherwise = if x `mod` y == 0
+                      then y
+                      else my_gcd y ( x `mod` y)
+
+my_lcm :: Integral a => a -> a -> a
+my_lcm x y = x * y `div` (my_gcd x y )
