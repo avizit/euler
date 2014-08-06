@@ -50,7 +50,7 @@ primeFactorise x = f' [] 2 x
           sqrtx = floor (sqrt (fromIntegral x))
 
 
-numFactors :: Integer -> Int --because length returns int                                                                                                                                                                         
+numFactors :: Integer -> Int --because length returns int
 numFactors  x =  product $ map (\y -> y+1) $ map length $ groupBy (==) (primeFactorise x )
 
 

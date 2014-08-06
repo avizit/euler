@@ -11,7 +11,13 @@ import Problems.P007
 import Problems.P008
 import Problems.P009
 import Problems.P010
+import Problems.P011
+import Problems.P012
+
 
 
 main :: IO ()
-main = putStrLn $  show  p010
+--main = do
+--  x <- p011
+--  putStrLn $ show x
+main = putStrLn $ show p012
