@@ -63,3 +63,16 @@ my_gcd x y | x < y = my_gcd y x
 
 my_lcm :: Integral a => a -> a -> a
 my_lcm x y = x * y `div` (my_gcd x y )
+
+
+
+nchoosek :: Integral a => a -> a -> a
+nchoosek n r = factorial n  `div` ( ( factorial r ) * (factorial  (n -r)))
+
+
+factorial :: Integral a => a -> a
+factorial n = product [1..n]
+
+
+permutation :: Integral a => a -> a -> a
+permutation n r = factorial n `div` factorial (n - r) 
