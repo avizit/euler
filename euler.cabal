@@ -57,7 +57,7 @@ executable euler
   -- other-extensions:    
   
   -- Other library packages from which modules are imported.
-  build-depends:       base >=4.6 && <4.7, QuickCheck
+  build-depends:       base, QuickCheck, logict, array, containers, transformers, mtl
   
   -- Directories containing source files.
   hs-source-dirs: src      
