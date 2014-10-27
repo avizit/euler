@@ -18,6 +18,9 @@ import Problems.P014
 import Problems.P015
 import Problems.P016
 import Problems.P017
+import Problems.P018
+
+
 
 
 
@@ -25,4 +28,5 @@ main :: IO ()
 main = do
 --  x <- p013
 --  putStrLn $ show x
- putStrLn $ show p017
+ p018
+ --putStrLn $ show p017
